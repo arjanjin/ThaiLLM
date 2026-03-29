@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_URL = "http://thaillm.or.th/api/pathumma/v1/chat/completions"
+API_URL = "https://thaillm.or.th/api/pathumma/v1/chat/completions"
 API_KEY = os.getenv("THAILLM_API_KEY", "")
 
 
