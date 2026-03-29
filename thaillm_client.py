@@ -6,6 +6,7 @@ load_dotenv()
 
 API_URL = "https://thaillm.or.th/api/pathumma/v1/chat/completions"
 API_KEY = os.getenv("THAILLM_API_KEY", "")
+CONSUMER_ID = os.getenv("THAILLM_CONSUMER_ID", "")
 
 
 def chat(messages, model="/model", max_tokens=2048, temperature=0.3):
@@ -13,6 +14,7 @@ def chat(messages, model="/model", max_tokens=2048, temperature=0.3):
     headers = {
         "Content-Type": "application/json",
         "apikey": API_KEY,
+        "consumerid": CONSUMER_ID,
     }
     payload = {
         "model": model,
